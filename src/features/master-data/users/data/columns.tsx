@@ -5,30 +5,39 @@ import { User } from '../users.type';
 
 export const columns: ColumnDef<User>[] = [
   {
-    accessorKey: 'name',
+    accessorKey: 'fullname',
     header: 'Name',
     cell: ({ row }) => (
-      <Link to={`./${row.getValue('name')}`}>
-        {capitalize(row.getValue('name'))}
+      <Link to={`./${row.original.id}`}>
+        {capitalize(row.getValue('fullname'))}
       </Link>
     ),
   },
   {
     accessorKey: 'email',
     header: 'Email',
-    cell: ({ row }) => (
-      <Link to={`./${row.getValue('email')}`}>
-        {capitalize(row.getValue('email'))}
-      </Link>
-    ),
+    // cell: ({ row }) => (
+    //   <Link to={`./${row.getValue('email')}`}>
+    //     {capitalize(row.getValue('email'))}
+    //   </Link>
+    // ),
+  },
+  {
+    accessorKey: 'address',
+    header: 'Address',
+    // cell: ({ row }) => (
+    //   <Link to={`./${row.getValue('email')}`}>
+    //     {capitalize(row.getValue('email'))}
+    //   </Link>
+    // ),
   },
   {
     accessorKey: 'phone',
     header: 'Phone',
-    cell: ({ row }) => (
-      <Link to={`./${row.getValue('phone')}`}>
-        {capitalize(row.getValue('phone'))}
-      </Link>
-    ),
+    // cell: ({ row }) => (
+    //   <Link to={`./${row.getValue('phone')}`}>
+    //     {capitalize(row.getValue('phone'))}
+    //   </Link>
+    // ),
   },
 ];

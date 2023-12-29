@@ -56,7 +56,7 @@ const DataTable = <TData, TValue>(props: DataTableProps<TData, TValue>) => {
 
   return (
     <>
-      <div className="">
+      <div className="border">
         <Table>
           <TableHeader className="">
             {table.getHeaderGroups().map((headerGroup) => (
